@@ -28,7 +28,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .card {
@@ -36,4 +36,112 @@ main {
     height: 448px;
     width: 600px;
     border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    padding: 5.4%;
+    gap: 18px;
+}
+
+.product-cat {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: var(--Darkcyan);
+}
+
+.product-name {
+    font-size: 2.18rem;
+    line-height: 1.05em;
+}
+
+.product-description {
+    color: var(--Darkgrayishblue);
+    line-height: 1.6em;
+    font-weight: 300;
+    margin: 6px 0px;
+}
+
+.price-container {
+    margin-top: 4px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10%;
+    color: var(--Darkcyan);
+}
+
+.curr-price {
+    font-size: 2.18rem;
+    font-weight: 700;
+}
+
+.prev-price {
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+button {
+    background-color: var(--Darkcyan);
+    border: none;
+    margin-top: 8px;
+    border-radius: 8px;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-img {
+    height: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+        gap: 0px;
+        position: relative;
+    }
+    .left {
+        height: 236px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right {
+        gap: 12px;
+    }
+    button {
+        height: 50px;
+    }
+    .product-img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
 }
